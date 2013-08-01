@@ -1,14 +1,8 @@
 ---
-layout: post
-title: "New UP Version"
-category: posts
+layout: default
+title: Hello, World
 ---
 
-So I decided to release a new [UP][1] version. Changes include:
+# Hello, World
 
-- Bootstrap 3.0.0;
-- Last Font-Awesome version;
-- Improved Makefile and Rakefile;
-- Pygments for syntax highlight;
-- Bootstrap collapse plugin (navbar is now fully responsive);
-- Minor tweaks.
+Lorem ipsum dolor sit amet, consectetur adipisicing el
