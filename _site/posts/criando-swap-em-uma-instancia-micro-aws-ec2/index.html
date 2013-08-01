@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <title>404</title>
+  <title>Criando swap em uma instancia micro AWS EC2</title>
 
   <meta name="author" content="Innovatt - Inovação e tecnologia" />
   <meta name="description" content="" />
@@ -73,20 +73,92 @@
   </div>
 
   <div class="container">
-    <section class="content error">
-  <h1>404</h1>
-  <section class="error-text">
-    <p>
-      Sorry dude, I really didn't want to do this, but, well, you tried to
-      access a page that doesn't exists...
-    </p>
-    <p>
-      Ok, we still can be friends... I'll help you with this.. go to our
-      <a href="/">home</a>, and search what you want. Just that easy.
-    </p>
-    <p>Sorry again for the inconvenient!</p>
-    <p>I'll see you soon.</p>
+    <section class="content">
+  <h1>
+    <a href="/posts/criando-swap-em-uma-instancia-micro-aws-ec2">Criando swap em uma instancia micro AWS EC2</a>
+  </h1>
+
+  <section class="byline">
+    August  1, 2013
   </section>
+
+  <p>Criando swap em uma instancia micro AWS EC2.</p>
+
+<p>A Amazon web service disponibiliza uma instancia EC2 micro (que e de graca por um ano), com pouco de mais de 600 MB de memoria RAM. Porem esta instancia nao tem swap por padrao, e se algum processo seu demandar mais memoria do que a existente o processo sera morto.</p>
+
+<p>Para verificar a swap (Estou usando Ubuntu v.12):</p>
+<code>
+$ free
+</code>
+<p>ubuntu@ip-10-xxx-26-xxx:~$ free total used free shared buffers cached Mem: 609468 600316 9152 0 16956 64428 -/+ buffers/cache: 518932 90536 Swap: 0 0 0</p>
+
+<p>Execute os comandos: <code>
+$ sudo dd if=/dev/zero of=/var/swapfile bs=1M count=1024
+$ sudo mkswap /var/swapfile
+$ sudo swapon /var/swapfile
+</code></p>
+
+<p>Execute o comando free novamente:</p>
+<code>
+$ free
+</code>
+<p>ubuntu@ip-10-xxx-26-xxx:/etc$ free total used free shared buffers cached Mem: 609468 600544 8924 0 6008 75284 -/+ buffers/cache: 519252 90216 Swap: 1048572 1188 1047384</p>
+
+<p>Pronto! A swap foi criada, porem ao reiniciar a maquina esse configuracao sera perdida. Para tornar permanente nesta alteracao, adicione a seguinte linha no final do arquivo /etc/fstab:</p>
+<code>
+$ sudo vi /etc/fstab
+</code>
+<p>/var/swapfile none swap sw 0 0</p>
+
+<p>E isso ai, espero que tenha ajudado. Se tiver uma duvida ou se o post ajudou, deixe uma mensagem.</p>
+
+<p>Abraaos, Leandro Nardo</p>
+  <div class="pull"></div>
+  <a  href="https://twitter.com/share" class="twitter-share-button"
+data-via="innovat_t" data-lang="en" data-size="large">Tweet</a>
+<script>
+!function(d,s,id){
+  var js,fjs=d.getElementsByTagName(s)[0];
+  if(!d.getElementById(id)){
+    js=d.createElement(s);
+    js.id=id;
+    js.src="//platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js,fjs);
+  }
+}(document,"script","twitter-wjs");
+</script>
+
+  <hr>
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'innovatt';
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  
+   
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-42866277-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+
+
 </section>
 
   </div>
