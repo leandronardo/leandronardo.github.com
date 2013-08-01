@@ -1,3 +1,13 @@
+permalink: /posts/:title
+rdiscount:
+  extensions: [smart]
+title : Innovatt - Inovação e tecnologia
+production_url : http://blog.innovatt.com
+#description: "Througths, flamewars, utilities, tutorials, codes, projects."
+disqus_shortname: leandronardo
+
+
+
 # Settings for analytics helper
 # Set 'provider' to the analytics provider you want to use.
 # Set 'provider' to false to turn analytics off globally.
@@ -15,3 +25,6 @@ author :
   #github : caarlos0
   twitter : innovat_t
   email: leandronardo@innovatt.com.br
+  
+  
+  
