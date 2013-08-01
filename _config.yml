@@ -1,6 +1,6 @@
 permalink: /posts/:title
-rdiscount:
-  extensions: [smart]
+#rdiscount:
+#  extensions: [smart]
 title : Innovatt - Inovação e tecnologia
 production_url : http://blog.innovatt.com
 #description: "Througths, flamewars, utilities, tutorials, codes, projects."
