@@ -8,3 +8,10 @@ analytics :
   tracking_id : 'UA-42866277-1'
   getclicky :
   site_id :
+
+
+author :
+  name : Innovatt - Inovação e tecnologia
+  #github : caarlos0
+  twitter : innovat_t
+  email: leandronardo@innovatt.com.br
