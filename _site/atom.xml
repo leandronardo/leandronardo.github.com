@@ -4,7 +4,7 @@
  <title>Innovatt - Inovação e tecnologia</title>
  <link href="http://blog.innovatt.com/atom.xml" rel="self"/>
  <link href="http://blog.innovatt.com/"/>
- <updated>2013-08-01T15:57:23-03:00</updated>
+ <updated>2013-08-01T16:50:57-03:00</updated>
  <id>http://blog.innovatt.com</id>
  <author>
    <name>Innovatt - Inovação e tecnologia</name>
@@ -28,7 +28,9 @@ $ free
 
 &lt;p&gt;Execute os comandos: &lt;code&gt;
 $ sudo dd if=/dev/zero of=/var/swapfile bs=1M count=1024
+&lt;/code&gt; &lt;code&gt;
 $ sudo mkswap /var/swapfile
+&lt;/code&gt; &lt;code&gt;
 $ sudo swapon /var/swapfile
 &lt;/code&gt;&lt;/p&gt;
 
