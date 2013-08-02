@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <title>Criando swap em uma instancia micro AWS EC2</title>
+  <title>Criando swap em uma inst&acirc;ncia micro AWS EC2</title>
 
   <meta name="author" content="Innovatt - Inovação e tecnologia" />
   <meta name="description" content="" />
@@ -40,14 +40,14 @@
       <div class="nav-collapse collapse navbar-responsive-collapse">
         <ul class="nav navbar-nav pull-right hidden-print">
           <li>
-            <a class="hidden-sm" href="http://github.com/caarlos0/up"
-              title="Get this theme!">
-              <i class="icon-download icon-large"></i>
+            <a class="hidden-sm" href="http://blog.innovatt.com.br"
+              title="Inicio!">
+              <i class="icon-home icon-large"></i>
             </a>
-            <a class="visible-sm" href="http://github.com/caarlos0/up"
-              title="Get this theme!">
-              <i class="icon-download icon-large"></i>
-              Get this theme!
+            <a class="visible-sm" href="http://blog.innovatt.com.br"
+              title="Inicio!">
+              <i class="icon-home icon-large"></i>
+              Inicio
             </a>
           </li>
           <li>
@@ -76,22 +76,24 @@
   <div class="container">
     <section class="content">
   <h1>
-    <a href="/posts/criando-swap-em-uma-instancia-micro-aws-ec2">Criando swap em uma instancia micro AWS EC2</a>
+    <a href="/posts/criando-swap-em-uma-instancia-micro-aws-ec2">Criando swap em uma inst&acirc;ncia micro AWS EC2</a>
   </h1>
 
   <section class="byline">
     August  1, 2013
   </section>
 
-  <p>Criando swap em uma instancia micro AWS EC2.</p>
-
-<p>A Amazon web service disponibiliza uma instancia EC2 micro (que e de graca por um ano), com pouco de mais de 600 MB de memoria RAM. Porem esta instancia nao tem swap por padrao, e se algum processo seu demandar mais memoria do que a existente o processo sera morto.</p>
+  <p>A Amazon web service disponibiliza uma inst&#226;ncia <a href='http://aws.amazon.com/pt/ec2/'>EC2 micro</a> (que e de gra&#231;a por um ano), com pouco de mais de 600 MB de memoria RAM. Porem esta instancia nao tem swap por padrao, e se algum processo seu demandar mais memoria do que a existente o processo sera morto.</p>
 
 <p>Para verificar a swap (Estou usando Ubuntu v.12):</p>
 <code>
 $ free
 </code>
-<p>ubuntu@ip-10-xxx-26-xxx:~$ free total used free shared buffers cached Mem: 609468 600316 9152 0 16956 64428 -/+ buffers/cache: 518932 90536 Swap: 0 0 0</p>
+<pre><code>ubuntu@ip-10-xxx-26-xxx:~$ free
+total used free shared buffers cached
+Mem: 609468 600316 9152 0 16956 64428
+-/+ buffers/cache: 518932 90536
+Swap: 0 0 0</code></pre>
 
 <p>Execute os comandos: <code>
 $ sudo dd if=/dev/zero of=/var/swapfile bs=1M count=1024
@@ -105,17 +107,21 @@ $ sudo swapon /var/swapfile
 <code>
 $ free
 </code>
-<p>ubuntu@ip-10-xxx-26-xxx:/etc$ free total used free shared buffers cached Mem: 609468 600544 8924 0 6008 75284 -/+ buffers/cache: 519252 90216 Swap: 1048572 1188 1047384</p>
+<pre><code>ubuntu@ip-10-xxx-26-xxx:/etc$ free
+total used free shared buffers cached
+Mem: 609468 600544 8924 0 6008 75284
+-/+ buffers/cache: 519252 90216
+Swap: 1048572 1188 1047384</code></pre>
 
-<p>Pronto! A swap foi criada, porem ao reiniciar a maquina esse configuracao sera perdida. Para tornar permanente nesta alteracao, adicione a seguinte linha no final do arquivo /etc/fstab:</p>
+<p>Pronto! A swap foi criada. Porem ao reiniciar a m&#225;quina esse configura&#231;&#227;o sera perdida. Para tornar permanente nesta alteracao, adicione a seguinte linha no final do arquivo /etc/fstab:</p>
 <code>
 $ sudo vi /etc/fstab
 </code>
-<p>/var/swapfile none swap sw 0 0</p>
+<pre><code>/var/swapfile none swap sw 0 0</code></pre>
 
-<p>E isso ai, espero que tenha ajudado. Se tiver uma duvida ou se o post ajudou, deixe uma mensagem.</p>
+<p>E isso ai, espero que tenha ajudado. Se tiver uma d&#250;vida ou se o post ajudou, deixe uma mensagem.</p>
 
-<p>Abraaos, Leandro Nardo</p>
+<p>Abra&#231;os, Leandro Nardo</p>
   <div class="pull"></div>
   <a  href="https://twitter.com/share" class="twitter-share-button"
 data-via="innovat_t" data-lang="en" data-size="large">Tweet</a>
@@ -170,20 +176,21 @@ _gaq.push(['_trackPageview']);
     <section class="meta">
       <div class="container">
         <div class="row">
-          <div class="col col-lg-2 col-offset-4">
+          <div class="col col-lg-4 col-offset-4">
             <a href="https://twitter.com/innovat_t">
               <i class="icon icon-twitter icon-4x"></i>
               <div>Siga-nos Twitter.</div>
             </a>
           </div>
-          <div class="col col-lg-2 next">
+ <!--         <div class="col col-lg-2 next">
             <a href="https://github.com/">
               <i class="icon icon-github icon-4x"></i>
               <div>
                 See my github profile.
               </div>
             </a>
-          </div>
+          </div> -->
+
         </div>
       </div>
     </section>
@@ -204,7 +211,6 @@ _gaq.push(['_trackPageview']);
 </script>
 
 
-  
 
 </body>
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
