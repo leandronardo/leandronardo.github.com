@@ -22,9 +22,11 @@ Execute os comandos:
 <code>
 $ sudo dd if=/dev/zero of=/var/swapfile bs=1M count=1024
 </code>
+
 <code>
 $ sudo mkswap /var/swapfile
 </code>
+
 <code>
 $ sudo swapon /var/swapfile
 </code>
@@ -46,6 +48,7 @@ Pronto! A swap foi criada. Porem ao reiniciar a m&aacute;quina esse configura&cc
 <code>
 $ sudo vi /etc/fstab
 </code>
+
 
 	/var/swapfile none swap sw 0 0
 
