@@ -4,7 +4,9 @@ title: "Como criar swap em uma inst&acirc;ncia micro AWS EC2"
 tags: [AWS, EC2, micro inst&acirc;ncia, swap, amazon web service]
 ---
 
-A Amazon web service disponibiliza uma inst&acirc;ncia [EC2 micro](http://aws.amazon.com/pt/ec2/) (que e de gra&ccedil;a por um ano), com pouco de mais de 600 MB de memoria RAM.  Porem esta instancia nao tem swap por padrao, e se algum processo seu demandar mais memoria do que a existente o processo sera morto.
+![AWS](/images/logo_aws.png)
+
+A Amazon web service disponibiliza uma inst&acirc;ncia [EC2 micro](http://aws.amazon.com/pt/ec2/) (que &eacute; de gra&ccedil;a por um ano), com pouco de mais de 600 MB de mem&oacute;ria RAM.  Porem esta instancia nao tem swap por padrao, e se algum processo seu demandar mais memoria do que a existente o processo sera morto.
 
 Para verificar a swap (Estou usando Ubuntu v.12):
 
@@ -19,14 +21,15 @@ $ free
 	Swap: 0 0 0
 
 Execute os comandos:
+<br/>
 <code>
 $ sudo dd if=/dev/zero of=/var/swapfile bs=1M count=1024
 </code>
-
+<br/>
 <code>
 $ sudo mkswap /var/swapfile
 </code>
-
+<br/>
 <code>
 $ sudo swapon /var/swapfile
 </code>

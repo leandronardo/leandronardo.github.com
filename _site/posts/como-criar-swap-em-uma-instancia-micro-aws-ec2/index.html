@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <title>Criando swap em uma inst&acirc;ncia micro AWS EC2</title>
+  <title>Como criar swap em uma inst&acirc;ncia micro AWS EC2</title>
 
   <meta name="author" content="Innovatt - Inovação e tecnologia" />
   <meta name="description" content="" />
@@ -76,14 +76,16 @@
   <div class="container">
     <section class="content">
   <h1>
-    <a href="/posts/criando-swap-em-uma-instancia-micro-aws-ec2">Criando swap em uma inst&acirc;ncia micro AWS EC2</a>
+    <a href="/posts/como-criar-swap-em-uma-instancia-micro-aws-ec2">Como criar swap em uma inst&acirc;ncia micro AWS EC2</a>
   </h1>
 
   <section class="byline">
     August  1, 2013
   </section>
 
-  <p>A Amazon web service disponibiliza uma inst&#226;ncia <a href='http://aws.amazon.com/pt/ec2/'>EC2 micro</a> (que e de gra&#231;a por um ano), com pouco de mais de 600 MB de memoria RAM. Porem esta instancia nao tem swap por padrao, e se algum processo seu demandar mais memoria do que a existente o processo sera morto.</p>
+  <p><img alt='AWS' src='/images/logo_aws.png' /></p>
+
+<p>A Amazon web service disponibiliza uma inst&#226;ncia <a href='http://aws.amazon.com/pt/ec2/'>EC2 micro</a> (que &#233; de gra&#231;a por um ano), com pouco de mais de 600 MB de mem&#243;ria RAM. Porem esta instancia nao tem swap por padrao, e se algum processo seu demandar mais memoria do que a existente o processo sera morto.</p>
 
 <p>Para verificar a swap (Estou usando Ubuntu v.12):</p>
 <code>
@@ -95,11 +97,11 @@ Mem: 609468 600316 9152 0 16956 64428
 -/+ buffers/cache: 518932 90536
 Swap: 0 0 0</code></pre>
 
-<p>Execute os comandos: <code>
+<p>Execute os comandos: <br /> <code>
 $ sudo dd if=/dev/zero of=/var/swapfile bs=1M count=1024
-</code> <code>
+</code> <br /> <code>
 $ sudo mkswap /var/swapfile
-</code> <code>
+</code> <br /> <code>
 $ sudo swapon /var/swapfile
 </code></p>
 
@@ -138,6 +140,20 @@ data-via="innovat_t" data-lang="en" data-size="large">Tweet</a>
 </script>
 
   <hr>
+
+	  <script type="text/javascript"><!--
+  google_ad_client = "ca-pub-2613855278776966";
+  /* anuncio_cabelhaco */
+  google_ad_slot = "1052870738";
+  google_ad_width = 728;
+  google_ad_height = 90;
+  //-->
+  </script>
+  <script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+
   <div id="disqus_thread"></div>
 <script type="text/javascript">
   var disqus_shortname = 'innovatt';
@@ -151,7 +167,7 @@ data-via="innovat_t" data-lang="en" data-size="large">Tweet</a>
 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
-  
+
    
 <script type="text/javascript">
 

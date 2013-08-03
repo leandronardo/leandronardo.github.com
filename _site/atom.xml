@@ -4,7 +4,7 @@
  <title>Innovatt - Inovação e tecnologia</title>
  <link href="http://blog.innovatt.com/atom.xml" rel="self"/>
  <link href="http://blog.innovatt.com/"/>
- <updated>2013-08-02T15:30:58-03:00</updated>
+ <updated>2013-08-03T00:56:14-03:00</updated>
  <id>http://blog.innovatt.com</id>
  <author>
    <name>Innovatt - Inovação e tecnologia</name>
@@ -12,11 +12,47 @@
 
  
  <entry>
-   <title>Criando swap em uma inst&acirc;ncia micro AWS EC2</title>
-   <link href="http://blog.innovatt.com/posts/criando-swap-em-uma-instancia-micro-aws-ec2"/>
+   <title>Como incluir atributos HTML5 em componentes JSF</title>
+   <link href="http://blog.innovatt.com/posts/como-incluir-atributos-HTML5-em-componentes-JSF"/>
+   <updated>2013-08-02T00:00:00-03:00</updated>
+   <id>http://blog.innovatt.com/posts/como-incluir-atributos-HTML5-em-componentes-JSF</id>
+   <content type="html">&lt;p&gt;Quando precisei usar alguns atributos do HTML 5 como placeholder, autofocus, com &lt;a href=&#39;http://primefaces.org/&#39;&gt;Primefaces&lt;/a&gt; vi que n&amp;#227;o era poss&amp;#237;vel uma vez que estes atributos n&amp;#227;o s&amp;#227;o recolhecidos. Depois de algum tempo pesquisando, encontrei a API &lt;a href=&#39;https://code.google.com/p/omnifaces/&#39;&gt;omnifaces&lt;/a&gt; que tem algumas classes utilit&amp;#225;rias para JSF e entre elas esta a &lt;a href=&#39;http://wiki.omnifaces.googlecode.com/hg/javadoc/org/omnifaces/renderkit/Html5RenderKit.html&#39;&gt;Html5RenderKit&lt;/a&gt;, respons&amp;#225;vel por renderizar os novos atributos.&lt;/p&gt;
+
+&lt;p&gt;O processo &amp;#233; bem simples:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Baixe a API &lt;a href=&#39;https://code.google.com/p/omnifaces/downloads/list&#39;&gt;omniface&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Inclua o arquivo &amp;#8216;omnifaces-X.X.jar&amp;#8217; na sua biblioteca de jars.&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;No arquivo faces-config.xml, inclua:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;factory&amp;gt;
+    &amp;lt;render-kit-factory&amp;gt;org.omnifaces.renderkit.Html5RenderKitFactory&amp;lt;/render-kit-factory&amp;gt;
+&amp;lt;/factory&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Inclua normalmente os atributos HTML5 nos componentes JSF:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;h:hinputText id=&quot;mensagem&quot; value=&quot;#{usuario.mensagem}&quot; placeholder=&quot;sua mensagem&quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;br /&gt;
+&lt;p&gt;&amp;#201; isso ai. &lt;br /&gt;&lt;br /&gt; Um abra&amp;#231;o, &lt;br /&gt; Leandro&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Como criar swap em uma inst&acirc;ncia micro AWS EC2</title>
+   <link href="http://blog.innovatt.com/posts/como-criar-swap-em-uma-instancia-micro-aws-ec2"/>
    <updated>2013-08-01T00:00:00-03:00</updated>
-   <id>http://blog.innovatt.com/posts/criando-swap-em-uma-instancia-micro-aws-ec2</id>
-   <content type="html">&lt;p&gt;A Amazon web service disponibiliza uma inst&amp;#226;ncia &lt;a href='http://aws.amazon.com/pt/ec2/'&gt;EC2 micro&lt;/a&gt; (que e de gra&amp;#231;a por um ano), com pouco de mais de 600 MB de memoria RAM. Porem esta instancia nao tem swap por padrao, e se algum processo seu demandar mais memoria do que a existente o processo sera morto.&lt;/p&gt;
+   <id>http://blog.innovatt.com/posts/como-criar-swap-em-uma-instancia-micro-aws-ec2</id>
+   <content type="html">&lt;p&gt;&lt;img alt=&#39;AWS&#39; src=&#39;/images/logo_aws.png&#39; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A Amazon web service disponibiliza uma inst&amp;#226;ncia &lt;a href=&#39;http://aws.amazon.com/pt/ec2/&#39;&gt;EC2 micro&lt;/a&gt; (que &amp;#233; de gra&amp;#231;a por um ano), com pouco de mais de 600 MB de mem&amp;#243;ria RAM. Porem esta instancia nao tem swap por padrao, e se algum processo seu demandar mais memoria do que a existente o processo sera morto.&lt;/p&gt;
 
 &lt;p&gt;Para verificar a swap (Estou usando Ubuntu v.12):&lt;/p&gt;
 &lt;code&gt;
@@ -28,11 +64,11 @@ Mem: 609468 600316 9152 0 16956 64428
 -/+ buffers/cache: 518932 90536
 Swap: 0 0 0&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Execute os comandos: &lt;code&gt;
+&lt;p&gt;Execute os comandos: &lt;br /&gt; &lt;code&gt;
 $ sudo dd if=/dev/zero of=/var/swapfile bs=1M count=1024
-&lt;/code&gt; &lt;code&gt;
+&lt;/code&gt; &lt;br /&gt; &lt;code&gt;
 $ sudo mkswap /var/swapfile
-&lt;/code&gt; &lt;code&gt;
+&lt;/code&gt; &lt;br /&gt; &lt;code&gt;
 $ sudo swapon /var/swapfile
 &lt;/code&gt;&lt;/p&gt;
 
@@ -55,26 +91,6 @@ $ sudo vi /etc/fstab
 &lt;p&gt;E isso ai, espero que tenha ajudado. Se tiver uma d&amp;#250;vida ou se o post ajudou, deixe uma mensagem.&lt;/p&gt;
 
 &lt;p&gt;Abra&amp;#231;os, Leandro Nardo&lt;/p&gt;</content>
- </entry>
- 
- <entry>
-   <title>Hello World</title>
-   <link href="http://blog.innovatt.com/posts/hello-world"/>
-   <updated>2013-04-24T00:00:00-03:00</updated>
-   <id>http://blog.innovatt.com/posts/hello-world</id>
-   <content type="html">&lt;p&gt;Hello everyone :)&lt;/p&gt;
-
-&lt;p&gt;I just decided to start posting in my own blog, in english. I already have a &lt;a href='http://www.geekvigarista.com'&gt;blog&lt;/a&gt; with some friends. The posts are written in portuguese, it&amp;#8217;s wordpress, and I my last blog was a long time ago (because It&amp;#8217;s boring post in wordpress).&lt;/p&gt;
-
-&lt;p&gt;I don&amp;#8217;t realy like wordpress. Yeah, I just don&amp;#8217;t like it. I think thats is heavy and slow. So, I decided to give a chance to &lt;a href='http://jekyllbootstrap.com/'&gt;Jekyll Bootstrap&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#8217;ll not blog about &amp;#8221;&lt;em&gt;how to setup jekyll&lt;/em&gt;&amp;#8221;, you can read it &lt;a href='http://jekyllbootstrap.com/'&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;It&amp;#8217;s realy simple to configure, put to work, write posts, pages, and I can see the modifications easy in my local server :) And yeah, it&amp;#8217;s realy fast.&lt;/p&gt;
-
-&lt;p&gt;In some minutes, I&amp;#8217;ll update the &lt;a href='http://twitter.github.com/bootstrap'&gt;twitter bootstrap&lt;/a&gt; version, hack jekyll to be responsive, clean home listing the lastest posts and setup author and other things. It also have built-in support for Disqus and Twitter/G+/Facebook/etc (aka addthis) buttons.&lt;/p&gt;
-
-&lt;p&gt;In short: Jekyll is great, and I realy like it!&lt;/p&gt;</content>
  </entry>
  
 
