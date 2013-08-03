@@ -4,7 +4,7 @@
  <title>Innovatt - Inovação e tecnologia</title>
  <link href="http://blog.innovatt.com/atom.xml" rel="self"/>
  <link href="http://blog.innovatt.com/"/>
- <updated>2013-08-03T00:59:28-03:00</updated>
+ <updated>2013-08-03T01:16:16-03:00</updated>
  <id>http://blog.innovatt.com</id>
  <author>
    <name>Innovatt - Inovação e tecnologia</name>
@@ -26,11 +26,11 @@
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;p&gt;Inclua o arquivo &amp;#8216;omnifaces-X.X.jar&amp;#8217; na sua biblioteca de jars.&lt;/p&gt;
+&lt;p&gt;Inclua o arquivo &lt;code&gt;omnifaces-X.X.jar&lt;/code&gt; na sua biblioteca de jars.&lt;/p&gt;
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;p&gt;No arquivo faces-config.xml, inclua:&lt;/p&gt;
+&lt;p&gt;No arquivo &lt;code&gt;faces-config.xml&lt;/code&gt;, inclua:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;factory&amp;gt;
     &amp;lt;render-kit-factory&amp;gt;org.omnifaces.renderkit.Html5RenderKitFactory&amp;lt;/render-kit-factory&amp;gt;
 &amp;lt;/factory&amp;gt;
@@ -88,9 +88,9 @@ $ sudo vi /etc/fstab
 &lt;/code&gt;
 &lt;pre&gt;&lt;code&gt;/var/swapfile none swap sw 0 0&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;E isso ai, espero que tenha ajudado. Se tiver uma d&amp;#250;vida ou se o post ajudou, deixe uma mensagem.&lt;/p&gt;
+&lt;p&gt;E isso ai, espero que tenha ajudado.&lt;br /&gt; Se tiver uma d&amp;#250;vida ou se o post ajudou, deixe uma mensagem.&lt;/p&gt;
 
-&lt;p&gt;Abra&amp;#231;os, Leandro Nardo&lt;/p&gt;</content>
+&lt;p&gt;Abra&amp;#231;os,&lt;br /&gt; Leandro Nardo&lt;/p&gt;</content>
  </entry>
  
 

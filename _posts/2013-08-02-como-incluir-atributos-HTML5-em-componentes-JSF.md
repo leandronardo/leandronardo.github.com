@@ -15,9 +15,9 @@ O processo &eacute; bem simples:
 
 1. Baixe a API [omniface](https://code.google.com/p/omnifaces/downloads/list).
 
-2. Inclua o arquivo 'omnifaces-X.X.jar' na sua biblioteca de jars.
+2. Inclua o arquivo `omnifaces-X.X.jar` na sua biblioteca de jars.
 
-3. No arquivo faces-config.xml, inclua:
+3. No arquivo `faces-config.xml`, inclua:
 
 	<pre><code>&lt;factory&gt;
 	    &lt;render-kit-factory&gt;org.omnifaces.renderkit.Html5RenderKitFactory&lt;/render-kit-factory&gt;
