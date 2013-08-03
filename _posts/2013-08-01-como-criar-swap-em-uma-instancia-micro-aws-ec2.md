@@ -1,5 +1,6 @@
 --- 
 layout: post
+cover: https://dl.dropboxusercontent.com/s/nowfnmx1d7zdh76/logo_aws.png
 title: "Como criar swap em uma inst&acirc;ncia micro AWS EC2"
 tags: [AWS, EC2, micro inst&acirc;ncia, swap, amazon web service]
 ---
