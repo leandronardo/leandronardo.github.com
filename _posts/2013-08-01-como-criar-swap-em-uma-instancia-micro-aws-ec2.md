@@ -55,8 +55,8 @@ $ sudo vi /etc/fstab
 
 	/var/swapfile none swap sw 0 0
 
-E isso ai, espero que tenha ajudado.
+E isso ai, espero que tenha ajudado.<br/>
 Se tiver uma d&uacute;vida ou se o post ajudou, deixe uma mensagem.
 
-Abra&ccedil;os,
+Abra&ccedil;os,<br/>
 Leandro Nardo
