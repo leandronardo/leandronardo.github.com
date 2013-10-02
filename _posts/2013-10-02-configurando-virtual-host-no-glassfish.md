@@ -20,7 +20,7 @@ Vamos ao processo, que &eacute; simples:
 
 1. Inicie o glassfish pela linha de comando ou pelo Eclipse.
 
-2. Entre no console de admin. pelo link: ´localhost:4848´
+2. Entre no console de admin. pelo link: `localhost:4848`
 
 3. Navegue na arvore do menu at&eacute; Virtual Host
 
