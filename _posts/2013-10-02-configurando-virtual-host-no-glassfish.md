@@ -15,3 +15,15 @@ Uma das d&uacute;vidas era se o Glassfish na sua vers&atilde;o Open Source seria
 a aplica&ccedil;&atilde;o em produ&ccedil;&atilde;o. Esta sendo excelente a experi&ecirc;ncia, o servidor &eacute; est&aacute;vel e escal&aacute;vel,
 tando que passamos outras apps. para o mesmo servidor e agora precisamos configurar a 
 funcionalidade de Virtual Host para respondermos para v&aacute;rios dom&iacute;nios diferente.
+
+Vamos ao processo, que &eacute; simples:
+
+1. Inicie o glassfish pela linha de comando ou pelo Eclipse.
+
+2. Entre no console de admin. pelo link: ´localhost:4848´
+
+3. Navegue na arvore do menu at&eacute; Virtual Host
+
+![vistual_host_glassfish](/images/glassfish_virtual_host_1.png)
+
+4. Clique em New... para criar um novo virtual host
