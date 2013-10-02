@@ -4,6 +4,8 @@ title: "Como incluir atributos HTML5 em componentes JSF"
 tags: [JSF, Java, HTML5, OmniFaces, primefaces]
 ---
 
+![html5](/images/HTML5_Color_Black.png)
+
 Quando precisei usar alguns atributos do HTML 5 como placeholder, autofocus, com
 [Primefaces] (http://primefaces.org/) vi que n&atilde;o era poss&iacute;vel uma vez que estes
 atributos n&atilde;o s&atilde;o recolhecidos. Depois de algum tempo pesquisando, encontrei 
@@ -30,5 +32,4 @@ O processo &eacute; bem simples:
 	</code></pre>
 <br/>	
 &Eacute; isso ai. <br/><br/>
-Um abra&ccedil;o, <br/>
-Leandro
+Qualquer d&uacute;vida ou sugest&atilde;o deixe uma mensagem.
