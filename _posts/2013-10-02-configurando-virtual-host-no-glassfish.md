@@ -30,8 +30,8 @@ Vamos ao processo, que &eacute; simples:
 
 ![novo_vh](/images/novo_virtual_host.png)
 
-`Id:` que &eacute; obrigat&oacute;rio, preencha com um nome qualquer que fa&ccedil;a sentido para seu contexto.<br/>
-`Hosts:` tambem &eacute; obrigat&oacute;rio, preencha com o dom&iacute;nio que deve apontar para a app. separado por v&iacute;ngula.<br/>
+`Id:` que &eacute; obrigat&oacute;rio, preencha com um nome qualquer que fa&ccedil;a sentido para seu contexto.<br/><br/>
+`Hosts:` tambem &eacute; obrigat&oacute;rio, preencha com o dom&iacute;nio que deve apontar para a app. separado por v&iacute;ngula.<br/><br/>
 `Importante`: Note que esse &eacute; o campo mais importante, se alguma coisa n&atilde;o funcionar provavelmente o erro esta nele.
 
 5. O seu dom&iacute;nio deve apontar para o IP, DNS P&uacute;blico do load balance da m&aacute;quina onde esta instalado o Glassfish.
