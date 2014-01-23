@@ -25,4 +25,4 @@ Reinicie o servidor e est&aacute; pronto.
 Quero deixar registrado que estamos muito contentes com o baixo consumo de mem&oacute;ria e a &oacute;tima performance do Jetty, isso sem fazer ainda qualquer tunning pelo Nginx.
 
 Espero que ajude.
-Qualquer d&uacute;vida ou sugest&atilde;o deixe uma mensagem. 
+Qualquer d&uacute;vida ou sugest&atilde;o deixe uma mensagem.  
