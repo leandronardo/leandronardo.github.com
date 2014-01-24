@@ -21,6 +21,24 @@ $ free
 	-/+ buffers/cache: 518932 90536
 	Swap: 0 0 0
 
+Execute os comandos:
+<br/>
+
+<code>
+$ sudo dd if=/dev/zero of=/var/swapfile bs=1M count=1024
+</code>
+
+<br/>
+
+<code>
+$ sudo mkswap /var/swapfile
+</code>
+
+<br/>
+
+<code>
+$ sudo swapon /var/swapfile
+</code>
 
 Execute o comando free novamente:
 
