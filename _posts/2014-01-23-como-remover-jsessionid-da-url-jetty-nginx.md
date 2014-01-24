@@ -13,12 +13,12 @@ A solu&ccedil;&atilde;o para o problema &eacute; muito simples esta dispon&iacut
 
 Acrescentar no web.xml as seguintes linhas:
 
-<code>
-  <context-param>
+```xml
+ <context-param>
     <param-name>org.eclipse.jetty.servlet.SessionIdPathParameterName</param-name> 
     <param-value>none</param-value>
   </context-param>	
-</code>
+```
 
 Reinicie o servidor e est&aacute; pronto.
 
