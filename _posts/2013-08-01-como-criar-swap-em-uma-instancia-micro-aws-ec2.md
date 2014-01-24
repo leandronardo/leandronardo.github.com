@@ -7,21 +7,10 @@ tags: [AWS, EC2, micro inst&acirc;ncia, swap, amazon web service]
 
 ![AWS](/images/logo_aws.png)
 
+A Amazon web service disponibiliza uma inst&acirc;ncia [EC2 micro](http://aws.amazon.com/pt/ec2/) (que &eacute; de gra&ccedil;a por um ano), com pouco de mais de 600 MB de mem&oacute;ria RAM.  Porem esta inst&acirc;ncia nao tem swap por padr&atilde;o, e se algum processo seu demandar mais mem&oacute;ria do que a existente o processo sera morto.
 
+Para verificar a swap (Estou usando Ubuntu v.12):
 
-Execute os comandos:
-<br/>
-<code>
-$ sudo dd if=/dev/zero of=/var/swapfile bs=1M count=1024
-</code>
-<br/>
-<code>
-$ sudo mkswap /var/swapfile
-</code>
-<br/>
-<code>
-$ sudo swapon /var/swapfile
-</code>
 
 Execute o comando free novamente:
 
