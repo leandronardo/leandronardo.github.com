@@ -15,20 +15,12 @@ Para verificar a swap (Estou usando Ubuntu v.12):
 $ free
 </code>
 
-	
-Execute os comandos:
-<br/>
-<code>
-$ sudo dd if=/dev/zero of=/var/swapfile bs=1M count=1024
-</code>
-<br/>
-<code>
-$ sudo mkswap /var/swapfile
-</code>
-<br/>
-<code>
-$ sudo swapon /var/swapfile
-</code>
+	ubuntu@ip-10-xxx-26-xxx:~$ free
+	total used free shared buffers cached
+	Mem: 609468 600316 9152 0 16956 64428
+	-/+ buffers/cache: 518932 90536
+	Swap: 0 0 0
+
 
 Execute o comando free novamente:
 
