@@ -15,7 +15,11 @@ Para verificar a swap (Estou usando Ubuntu v.12):
 $ free
 </code>
 
-
+	ubuntu@ip-10-xxx-26-xxx:/etc$ free
+	total used free shared buffers cached
+	Mem: 609468 600316 9152 0 16956 64428
+	-/+ buffers/cache: 518932 90536
+	Swap: 0 0 0
 
 Execute os comandos:
 <br/>
